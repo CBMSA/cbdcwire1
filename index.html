@@ -3,12 +3,71 @@
 <head>
   <title>SADC CBDC International Trade</title>
   <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    #tradeForm {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
   <h2>CBDC Trade Portal</h2>
-  <input id="seller" placeholder="Seller Wallet Address" />
-  <input id="amount" placeholder="Amount (in ETH)" />
-  <button onclick="startTrade()">Initiate Trade</button>
+  <div id="tradeForm">
+    <input id="seller" placeholder="Seller Wallet Address" />
+    <input id="amount" placeholder="Amount (in ETH)" type="number" />
+    <button onclick="startTrade()">Initiate Trade</button>
+  </div>
+  <div class="footer">
+    &copy; 2025 SADC CBDC International Trade
+  </div>
 
   <script>
     async function startTrade() {
